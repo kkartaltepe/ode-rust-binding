@@ -142,15 +142,6 @@ extern "C" {
     pub fn dCollide(o1: dGeomID, o2: dGeomID, flags: ::libc::c_int,
                     contact: *mut dContactGeom, skip: ::libc::c_int)
      -> ::libc::c_int;
-    pub fn dSpaceCollide(space: dSpaceID, data: *mut ::libc::c_void,
-                         callback:
-                             *mut ::std::option::Option<extern "C" fn()
-                                                            -> ()>) -> ();
-    pub fn dSpaceCollide2(space1: dGeomID, space2: dGeomID,
-                          data: *mut ::libc::c_void,
-                          callback:
-                              *mut ::std::option::Option<extern "C" fn()
-                                                             -> ()>) -> ();
     pub fn dCreateSphere(space: dSpaceID, radius: dReal) -> dGeomID;
     pub fn dGeomSphereSetRadius(sphere: dGeomID, radius: dReal) -> ();
     pub fn dGeomSphereGetRadius(sphere: dGeomID) -> dReal;
