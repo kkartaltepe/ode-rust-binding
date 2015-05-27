@@ -3,6 +3,7 @@
 use common::*;
 use collision_space::*;
 use contact::*;
+use std::f32;
 
 pub type Enum_Unnamed1 = ::libc::c_uint;
 pub const dGeomCommonControlClass: ::libc::c_uint = 0;
@@ -38,6 +39,9 @@ pub const dLastSpaceClass: ::libc::c_uint = 13;
 pub const dFirstUserClass: ::libc::c_uint = 14;
 pub const dLastUserClass: ::libc::c_uint = 17;
 pub const dGeomNumClasses: ::libc::c_uint = 18;
+
+pub const dInfinity: ::libc::c_float = f32::MAX;
+
 pub enum Struct_dxHeightfieldData { }
 pub type dHeightfieldDataID = *mut Struct_dxHeightfieldData;
 pub type dHeightfieldGetHeight =
