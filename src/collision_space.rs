@@ -30,10 +30,10 @@ extern "C" {
     pub fn dSpaceQuery(arg1: dSpaceID, arg2: dGeomID) -> ::libc::c_int;
     pub fn dSpaceClean(arg1: dSpaceID) -> ();
     pub fn dSpaceCollide(space: dSpaceID, data: *mut ::libc::c_void,
-                         callback: *const dNearCallback) -> ();
+                         callback: dNearCallback) -> ();
     pub fn dSpaceCollide2(space1: dGeomID, space2: dGeomID,
                           data: *mut ::libc::c_void,
-                          callback: *const dNearCallback) -> ();
+                          callback: dNearCallback) -> ();
     pub fn dSpaceGetNumGeoms(arg1: dSpaceID) -> ::libc::c_int;
     pub fn dSpaceGetGeom(arg1: dSpaceID, i: ::libc::c_int) -> dGeomID;
     pub fn dSpaceGetClass(space: dSpaceID) -> ::libc::c_int;
